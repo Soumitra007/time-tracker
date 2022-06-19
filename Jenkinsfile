@@ -36,11 +36,7 @@ pipeline {
 	                
 	                  bat 'mvn test'
 	              }
-	               post {
-	               success {
-	                   junit 'target/surefire-reports/*.xml'
-	               }
-	           }   
+	               
 	          }
 	          
 	          stage('Package'){
@@ -51,6 +47,4 @@ pipeline {
 	              }
 	          }
 	            
-	          
-	      }
-	}
+	        }
