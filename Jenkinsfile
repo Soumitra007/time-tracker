@@ -12,7 +12,10 @@ pipeline {
     git_commit_author_email = ''
   }
 
-  stage('Compile'){
+  stages {
+
+    // Build
+    stage('Compile'){
 	             
 	              steps{
 	                  echo 'compiling..'
@@ -50,3 +53,4 @@ pipeline {
 	            
 	          
 	      }
+	}
